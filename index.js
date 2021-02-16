@@ -42,7 +42,7 @@ try {
 		const addOne = x => x + 1;
 		
 		// Rewrite the line below to use template literals.
-		const greeting = 'Hello ' + who + '! ' + addOne(2) + ' times.';
+		const greeting = `Hello ${who}! ${addOne(2)} times.`;
 
 		// Don't make changes below this line	
 		
@@ -58,10 +58,7 @@ try {
 	(function UseDefaultParameters() {
     
 		// Correct the syntax errors in the function.
-		function hello(who) {
-			if (who == undefined) {
-				who = "World";
-			}
+		function hello(who = "World") {
 			return 'Hello ' + who + '!';
 			};
 
@@ -149,9 +146,8 @@ try {
   
 	(function UseArrow2() {
 		// Correct the errors in the arrow function.
-		let x = 3;
-		let y = 5;
-		let add = () => x + y;
+
+		let add = (x,y) => x + y;
 
 		// Don't make changes below this line	
 		
@@ -171,8 +167,7 @@ try {
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// Tip: Spread operator might be needed too.
 	
-		let a, b, c;
-		[a,b,c]  = [arr[0],arr[2],arr.slice(3)];
+		const [a,b,c]  = [arr[0],arr[2],arr.slice(3)];
 
 		// Don't make changes below this line	
 		
@@ -186,13 +181,12 @@ try {
 
   
 	(function UseArrayDestructuring2() {
-		let a = 1;
-		let b = 2;
+		let [a,b] = [1,2];
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// You should not need a temporary variable anymore.
 		
-		[a,b] = [b,1]
+		[a,b] = [b,a];
 
 		// Don't make changes below this line	
 		
@@ -269,16 +263,15 @@ try {
   
 	(function UsePropertyShorthand() {
 		
-		let name, age, norwegian;
-		[name,age,norwegian] = ['Oslo', 985, true]
+		const name = 'Oslo';
+		const age = 985;
+		const norwegian = true;
 
-		
 		// Remove all unnecesary syntax to let the test pass.
-		
+
 		
 
-		let city = {name, age, dutch: !true
-		};
+		let city = {name, age, dutch: !norwegian};
 
 		// Don't make changes below this line	
 		
@@ -306,7 +299,6 @@ try {
 
 		solved++;
 	})();
-	
 
   
 	(function UseObjectSpreadProperties2() {
