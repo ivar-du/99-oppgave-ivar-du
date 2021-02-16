@@ -132,7 +132,7 @@ try {
   
 	(function UseArrow1() {
 		// Rewrite double as arrow function and make the test pass.
-		let double = () => 6;
+		let double = (x) => x * 2;
 
 		// Don't make changes below this line	
 		
@@ -181,7 +181,8 @@ try {
 
   
 	(function UseArrayDestructuring2() {
-		let [a,b] = [1,2];
+		let a = 1;
+		let b = 2;
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// You should not need a temporary variable anymore.
